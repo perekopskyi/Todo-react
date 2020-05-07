@@ -1,43 +1,43 @@
 .list {
   margin-bottom: 30px;
-    li {
-      display: flex;
-      align-items: center;
-      padding: 10px 12px;
-      cursor: pointer;
-      margin-bottom: 5px;
-      justify-content: space-between;
-      &.active {
-        background: #FFFFFF;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
-        border-radius: 4px;
-      }
-      i {
-        display: inline-flex;
-        margin-right: 8px;
-      }
-      .close {
-        font-size: 20px;
-        line-height: 20px;
-        color: #E3E3E3;
-      }
+
+  &__add-button {
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
     }
   }
 
-.badge {
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  position: relative;
-  left: 2px;
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    justify-content: space-between;
 
-  &--green {
-    background-color: #42B883;
-  }
-  &--blue {
-    background-color: #64C4ED;
-  }
-  &--pink {
-    background-color: #FFBBCC;
+    &:hover {
+      background: rgba(255,255,255,.4);
+    }
+
+    &.active {
+      background: #FFFFFF;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+    }
+    i {
+      display: inline-flex;
+      margin-right: 8px;
+    }
+    .close {
+      font-size: 20px;
+      line-height: 20px;
+      color: #E3E3E3;
+
+      &:hover {
+        color: rgb(56, 56, 56);
+      }
+    }
   }
 }

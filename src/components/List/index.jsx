@@ -1,22 +1,36 @@
 import React from 'react';
+import classNames from 'classnames';
+import Budge from '../Budge';
+
 import './list.scss';
 
 
-const List = ({items}) => {
+
+const List = ({ items, isRemoveble, onClick, onRemove }) => {
+
+  const removeList = (listName) => {
+    if (window.confirm(`Вы действительно хотите удалить список ${listName}?`)) {
+      onRemove(listName);
+    }
+  }
+
   return (
-    <ul className="list">
+    <ul onClick={onClick} className="list">
       {
-        items.map(({ color, icon, name, active}, index) => (
-          <li key={index} className={active ? 'active' : ''}>
+        items.map(({ color, icon, name, active, className}, index) => (
+          <li key={index} className={classNames(className, {'active': active})}>
             <div>
-              <i>{icon ? icon : <i className={`badge badge--${color}`}></i>}</i>
+              <i>{icon ? icon : <Budge color={color}/>}</i>
               <span>{name}</span>
             </div>
-            {
-              active
-              ? <div className='close'>&times;</div>
-              : null
-            }
+            {isRemoveble && (
+              <div
+                className='close'
+                onClick={() => removeList(name)}
+              >
+                &times;
+              </div>
+            )}
           </li>
         ))
       }
