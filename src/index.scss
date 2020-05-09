@@ -24,7 +24,7 @@
   &__sidebar {
     background: #E5E5E5;
     width: 250px;
-    height: 100%;
+    min-height: 100%;
     border-right: 1px solid #f1f1f1;
     padding: 60px 20px;
   }
@@ -47,13 +47,28 @@
   line-height: 17px;
   letter-spacing: 0.15px;
 
-  
   &:hover {
     background: darken($color: #4DD599, $amount: 6%);
     cursor: pointer;
   }
   &:active {
     background: darken($color: #4DD599, $amount: 10%);
+  }
+  &:disabled {
+    background: #d8d8d8;
+    cursor: not-allowed;
+  }
+
+  &-grey {
+    background: #F4F6F8;
+    color: #9C9C9C;
+
+    &:hover {
+      background: darken($color: #F4F6F8, $amount: 4%);
+    }
+    &:active {
+      background: darken($color: #F4F6F8, $amount: 6%);
+    }
   }
 }
 
@@ -64,6 +79,7 @@
   border-radius: 4px;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 
   &:focus {
     border-color: #dbdbdb;
