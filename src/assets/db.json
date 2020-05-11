@@ -21,14 +21,14 @@
       "id": 7
     },
     {
-      "name": "sdfsdf",
-      "colorId": 1,
-      "id": 8
+      "name": "пвапвап",
+      "colorId": 5,
+      "id": 10
     },
     {
-      "name": "покупки",
-      "colorId": 6,
-      "id": 9
+      "name": "Сходить в магазин",
+      "colorId": 8,
+      "id": 11
     }
   ],
   "tasks": [
@@ -77,7 +77,7 @@
     {
       "listId": 1,
       "text": "qweqwe",
-      "completed": true,
+      "completed": false,
       "id": 8
     },
     {
@@ -109,6 +109,24 @@
       "text": "Сделали удаление и редактирование задач и списков",
       "completed": true,
       "id": 17
+    },
+    {
+      "listId": 6,
+      "text": "30 дней преса",
+      "completed": false,
+      "id": 18
+    },
+    {
+      "listId": 11,
+      "text": "Хлеб цельнозерновой",
+      "completed": true,
+      "id": 19
+    },
+    {
+      "listId": 6,
+      "text": "Покатешки на великах",
+      "completed": false,
+      "id": 20
     }
   ],
   "colors": [

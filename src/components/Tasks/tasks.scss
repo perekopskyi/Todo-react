@@ -1,4 +1,12 @@
 .tasks {
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
   &__title {
     font-family: Montserrat;
     font-weight: bold;
@@ -43,7 +51,36 @@
       align-items: center;
       margin-bottom: 10px;
 
-      input {
+      &:hover &-actions {
+        opacity: 1;
+      }
+
+      &-actions {
+        display: flex;
+        opacity: 0;
+        transition: opacity .15s ease-in-out;
+        margin-left: 20px;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 35px;
+          height: 32px;
+          padding: 5px;
+          background-color: lighten($color: #f4f6f8, $amount: 2%);
+          border-radius: 6px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#f4f6f8, 2%);
+            svg {
+              opacity: .8;
+            }
+          }
+        }
+      }
+
+      p {
         margin-left: 15px;
         border: none;
       }

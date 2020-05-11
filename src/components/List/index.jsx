@@ -22,7 +22,6 @@ const List = ({ items, isRemoveble, onClick, onRemove, onClickItem, activeList }
     <ul onClick={onClick} className="list">
       {
         items.map((item, index) => {
-          console.log('item: ', item);
           const { color, icon, name, className } = item;
           return (
             <li
